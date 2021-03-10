@@ -26,7 +26,11 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "qpm-client-js": "^1.1.1",
+        "stream-browserify": "^3.0.0",
+        "vue-code-highlight": "^0.7.6",
         "vue-router": "^3.5.1",
+        "vuecode.js": "0.0.27",
         "vuetify": "^2.4.5"
     }
 }

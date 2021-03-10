@@ -46,6 +46,9 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Headers: Origin, Content-Type');
+
 $kernel = $app->make(Kernel::class);
 
 $response = tap($kernel->handle(
