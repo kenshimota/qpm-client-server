@@ -8,7 +8,7 @@ require('./bootstrap');
 import Vue from "vue";
 window.Vue = Vue;
 
-const { QPM } = require("qpm-client-js/index");
+const { QPM } = require("qpm-client-js");
 window.QPM = QPM;
 
 /*// esta es la variable cliente
