@@ -1,1 +1,1 @@
-php -S 0.0.0.0:$1 -t public
+php artisan serve --host 0.0.0.0 --port $1
