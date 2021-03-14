@@ -1,7 +1,6 @@
 
 # install php 7.4
 sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt-get install -y php libapache2-mod-php php-cli php-mysql php-gd php-imagick php-tidy php-xmlrpc php-mbstring php-gd php-xml php-zip php-curl
 
