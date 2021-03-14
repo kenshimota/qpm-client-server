@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "qpm-client-js": "^1.1.2",
+        "stream": "0.0.2",
         "vue-code-highlight": "^0.7.6",
         "vue-router": "^3.5.1",
         "vuecode.js": "0.0.27",
