@@ -4,17 +4,20 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 import Vue from "vue";
 window.Vue = Vue;
 
 const { QPM } = require("qpm-client-js");
 window.QPM = QPM;
 
+if (!localStorage["client-qpm"] == false)
+    window.ClientQPM = QPM(JSON.parse(localStorage["client-qpm"]));
+
 /*// esta es la variable cliente
 const Client = QPM({
     "username": "admin_lin001", // username
-    "password": "koona001", // password 
+    "password": "koona001", // password
     "server": "http://45.79.44.19:8888"  // link and port the server
 });
 
@@ -41,28 +44,25 @@ window.ClientQPM = Client;*/
 
 import { router } from "./routers";
 import App from "./components/App";
-import 'vuetify/dist/vuetify.min.css';
+import "vuetify/dist/vuetify.min.css";
 import Vuetify from "vuetify";
 import VueRouter from "vue-router";
-import VueCodeHighlight from 'vue-code-highlight';
-import 'vue-code-highlight/themes/window.css';
-import 'vue-code-highlight/themes/prism-okaidia.css';
+import VueCodeHighlight from "vue-code-highlight";
+import "vue-code-highlight/themes/window.css";
+import "vue-code-highlight/themes/prism-okaidia.css";
 
 Vue.use(Vuetify);
 Vue.use(VueRouter);
 Vue.use(VueCodeHighlight);
 
-
 router.beforeEach((to, from, next) => {
-    if( to.path != "/" && to.path != "/home" && !window.ClientQPM )
-        next({path: "/"});
-    else
-        next();
+    if (to.path != "/" && to.path != "/home" && !window.ClientQPM)
+        next({ path: "/" });
+    else next();
 });
 
-
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     router,
     components: { App },
     vuetify: new Vuetify()
