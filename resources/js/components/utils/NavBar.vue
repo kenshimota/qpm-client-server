@@ -16,6 +16,10 @@
                 <v-icon>mdi-book</v-icon>
                 <span>Test Api</span>
             </v-btn>
+            <v-btn elevation="0" to="/webgl" color="grey darken-3 white--text">
+                <v-icon>mdi-3d</v-icon>
+                <span>WebGl</span>
+            </v-btn>
             <v-btn
                 elevation="0"
                 to="/single-box"

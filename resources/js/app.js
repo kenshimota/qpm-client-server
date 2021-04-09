@@ -56,7 +56,12 @@ Vue.use(VueRouter);
 Vue.use(VueCodeHighlight);
 
 router.beforeEach((to, from, next) => {
-    if (to.path != "/" && to.path != "/home" && !window.ClientQPM)
+    if (
+        to.path != "/" &&
+        to.path != "/home" &&
+        !window.ClientQPM &&
+        to.path != "/webgl"
+    )
         next({ path: "/" });
     else next();
 });

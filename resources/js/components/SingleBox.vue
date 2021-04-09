@@ -363,12 +363,6 @@ export default {
             this.loading = true;
             this.$refs["div-map"].innerHTML = "";
 
-            /*this.Client.methods["fullPalletSVGFromData"] = {
-                method: "POST",
-                uri:
-                    "/QPMCalcServer/cfc/SVGPalletCalcs.cfc?method=fullPalletSVGFromData",
-                responseType: "text"
-            };*/
 
             let params = {
                 calc_type: this.calctype_value,

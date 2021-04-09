@@ -2,6 +2,7 @@ import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import TestApi from "./components/TestApi";
 import SingleBox from "./components/SingleBox";
+import WebGl from "./components/WebGl";
 import VueRouter from "vue-router";
 
 export const router = new VueRouter({
@@ -27,6 +28,11 @@ export const router = new VueRouter({
             path: "/single-box",
             name: "SingleBox",
             component: SingleBox
+        },
+        {
+            path: "/webgl",
+            name: "WegGl-show",
+            component: WebGl
         },
         {
             path: "/404",
